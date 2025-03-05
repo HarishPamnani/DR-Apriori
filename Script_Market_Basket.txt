@@ -1,0 +1,43 @@
+due to limitation access of GPU, we are using Google Colab as Demo of proposed study.
+
+At first,we are exploring the market basket optimisation.csv file. 
+As we know, that dataset of online or offline shoping mart is always categorical nature as well sparse, so we are using these dataset.
+
+Let's Go
+
+1. import all the libraries and your dataset
+2. We are creating list of list, numpy and removing all the NaN values from dataset
+3.Using TransactionEncoder, Convert the dataset into true and false, if items is purchased, then keep True else False
+
+4.The shape of dataset is 7500 transaction and 120 items are there
+
+5. Count that how many items are sold in a single transaction, that means, that maximum item purchase by customer in a single visit or transaction. So out of 121 items, only 19 items were purchased in a single transaction.
+
+6. find the maximum, minimum median and mean percentage of items.
+
+7. for our study, we focus on average and median dimension reduction, because ther is no signifance to remove maximum ,it has only one entry and so on minimum, So better to focus on Average and Median .
+
+8. Now, find the maximum selling item before and after the dimension reduction, Drop the cols on Average and Median,
+1.567 is the median and 3.259 is the average percentage of item.
+
+the shape of before deletion is 7500x121
+and Number of Cols dropped 60
+After deletion the size: (7501, 61)
+
+9. Set the threshold of Minimum Support and Minimum confidence
+
+10. Apply the Hybrid Apriori Algorithm
+Time taken 0.13101768493652344
+Number of rules 36
+Memory required by Hybrid- Apriori 346513408
+
+11. Apply the Dr-Apriori
+Memory required by DR-Apriori 346599424
+time time of Exceution: 0.10343265533447266
+Number of Rules 36
+
+12. Use Fp-Growth Algorithm
+
+Memory required by Fp-Growth 348758016
+Time taken by FPGrowth 0.8928296566009521
+Total Number of rules 36

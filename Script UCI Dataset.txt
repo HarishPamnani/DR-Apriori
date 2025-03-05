@@ -1,0 +1,11 @@
+Our Second Dataset is UCI15000.csv, This is also a sparse nature and cateogrical dataset.
+
+The size of this dataset is very Big, 15000 transaction and 4089 items,
+
+the time complexity of apriori algorithm is always 2^n, n is number of items here, so this is not possible to execute this code on Google Colab, We require GPU, but due to Video recording constraint on GPU, We can make its Video for execution
+
+the Steps are same as we did in market basket dataset,
+Average (Mean): 0.528450313850167
+Median: 0.24666666666666667
+
+The Maximum item sold in a transaction are 2160 in percentage and in value this is 753
